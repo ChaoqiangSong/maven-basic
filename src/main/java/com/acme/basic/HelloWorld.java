@@ -11,7 +11,7 @@ public class HelloWorld {
 
   public class Innie {
     public void doTheThing() {
-      Outie.this.increment();
+      HelloWorld.this.increment();
     }
   }
 

@@ -15,10 +15,19 @@ public class HelloWorld {
       // ...
     }
   }
-  
-public boolean equals(Object obj) {
-  HelloWorld mc = (HelloWorld)obj;  // Noncompliant
-  // ...
+
 }
 
+public class Outie {
+  private int i=0;
+
+  private void increment() {  // Noncompliant
+    i++;
+  }
+
+  public class Innie {
+    public void doTheThing() {
+      Outie.this.increment();
+    }
+  }
 }

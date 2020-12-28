@@ -1,6 +1,19 @@
 package com.acme.basic;
 
 public class HelloWorld {
+  
+  
+  private int i=0;
+
+  private void increment() {  // Noncompliant
+    i++;
+  }
+
+  public class Innie {
+    public void doTheThing() {
+      Outie.this.increment();
+    }
+  }
 
   void sayHello() {
     System.out.println("Hello World!");
@@ -16,18 +29,4 @@ public class HelloWorld {
     }
   }
 
-}
-
-public class Outie {
-  private int i=0;
-
-  private void increment() {  // Noncompliant
-    i++;
-  }
-
-  public class Innie {
-    public void doTheThing() {
-      Outie.this.increment();
-    }
-  }
 }

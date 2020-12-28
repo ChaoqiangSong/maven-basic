@@ -15,5 +15,10 @@ public class HelloWorld {
       // ...
     }
   }
+  
+public boolean equals(Object obj) {
+  HelloWorld mc = (HelloWorld)obj;  // Noncompliant
+  // ...
+}
 
 }
